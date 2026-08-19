@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK MANAGEMENT</title>
+    <link rel="stylesheet" href="manage.css">
+    <script src="manage.js" defer></script>
+</head>
+<body>
+    <div class="app-card">
+  
+    <div class="header">
+      <h1>My Task Manager</h1>
+      <p>Organize your day, one task at a time.</p>
+    </div>
+
+    
+    <div class="content-body">
+      
+      <!-- Tabs -->
+      <div class="nav-bar">
+        <a href="#pending-section"class="nav-btn active">📋 Pending</a>
+        <a href="#complete-section"class="nav-btn">☑ Completed</a>
+        <a href="#resources-section"class="nav-btn">📁 Resources</a>
+        <a href="#add-task-section"class="nav-btn">⊕ Add Task</a>
+      </div>
+
+      
+      <div class="banner-container">
+        <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1000" alt="Workspace banner" />
+      </div>
+
+  
+      <div class="task-grid">
+        <div id="pending-section" class="card pending-card">
+          <h3>🕒 Pending Tasks</h3>
+          <p>Here are the tasks you need to complete:</p>
+          <ul id="pendingList">
+            <li>Finish the project report</li>
+            <li>Call the client for feedback</li>
+            <li>Prepare presentation slides</li>
+          </ul>
+        </div>
+
+        <div id="complete-section"class="card completed-card">
+          <h3>✔ Completed Tasks</h3>
+          <p>Great job! Here's what you've already finished:</p>
+          <ul id="completedList">
+            <li>Review the quarterly results</li>
+            <li>Update the project timeline</li>
+          </ul>
+        </div>
+      </div>
+
+      
+      <div id="resources-section"class="card resources-card">
+        <h3>📁 Resources</h3>
+        <p>Useful links and materials:</p>
+        <ul>
+          <li><a href="https://www.google.com" target="_blank">Task Management Guide</a></li>
+          <li><a href="https://www.google.com" target="_blank">Template Library</a></li>
+        </ul>
+      </div>
+
+      
+      <div id="add-task-section"class="form-card">
+        <h3>📝 Add New Task</h3>
+        
+        <div class="form-group">
+          <label>Task Name:</label>
+          <input type="text"id="taskName" placeholder="Enter task name" />
+        </div>
+
+        <div class="form-group">
+          <label>Description:</label>
+          <textarea rows="2" id="description" placeholder="Enter description"></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-col">
+            <label>Category:</label>
+            <select id ="category"><option>Work</option></select>
+          </div>
+          <div class="form-col">
+            <label>Priority:</label>
+            <select id="priority"><option>Low</option></select>
+          </div>
+          <div class="form-col">
+            <label>Due Date:</label>
+            <input type="date" id="dueDate" />
+          </div>
+        </div>
+
+        <div class="submit-btn-container">
+          <button class="submit-btn" onclick="addTask()">+ Add Task</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      © 2026 My Task Manager. All rights reserved.
+    </div>
+  </div>
+  <div class="calculator">
+    <h3> Simple Calculator</h3>
+    <input type="number" id="num1" placeholder="Enter first number" />
+    <input type="number" id="num2" placeholder="Enter second number" />
+    <div class="calc-buttons">
+      <button onclick="calculate('+')">+</button>
+      <button onclick="calculate('-')">-</button>
+      <button onclick="calculate('*')">*</button>
+      <button onclick="calculate('/')">/</button>
+    </div>
+    <h4>Result: <span id="result">0</span></h4>
+  </div>
+
+</body>
+</html>
